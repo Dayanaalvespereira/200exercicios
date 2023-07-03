@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    let primeira = Number(prompt("Digite a primeira nota"))
+    let segunda= Number(prompt("Digite a segunda nota"))
+    let terceira = Number(prompt("Digite a terceira nota"))
+    let quarta = Number(prompt("Digite a quarta nota"))
+
+    media = (primeira + segunda + terceira + quarta) / 4
+
+    
+    if(media > 7){
+        document.write(`Parabéns! você foi Aprovado. <br>`)
+    }
+    else{
+        document.write(`Infelizmente voçê foi Reprovado. <br>`)
+    }
+
+    document.write(`Média: ${media}`)
+    
+
+
+  </script>
+</script>
+</body>
+</html>

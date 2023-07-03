@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Verificação de Votação</title>
+  <script>
+    function verificarVotacao() {
+      var idade = parseInt(document.getElementById("idade").value);
+      var possuiTitulo = document.getElementById("Você tem título de eleitor s").checked;
+      var resultado = document.getElementById("resultado");
+
+      if (idade >= 16 && possuiTitulo) {
+        resultado.innerHTML = "Pode votar.";
+      } else {
+        resultado.innerHTML = "Não pode votar.";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Verificação de Votação</h1>
+  <label for="idade">Idade:</label>
+  <input type="number" id="idade"><br>
+  <label for="possuiTitulo">Possui título de eleitor:</label>
+  <input type="checkbox" id="possuiTitulo"><br>
+  <button onclick="verificarVotacao()">Verificar</button>
+  <p id="resultado"></p>
+</body>
+</html>
+
+        
+        
+    
+   
+     
+    </script>
+</body>
+</html>

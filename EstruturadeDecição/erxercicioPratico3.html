@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Calculadora de Raízes de Equação do 2º Grau</title>
+      <script>
+        function calcularRaizes() {
+          var A = parseFloat(document.getElementById("coeficienteA").value);
+          var B = parseFloat(document.getElementById("coeficienteB").value);
+          var C = parseFloat(document.getElementById("coeficienteC").value);
+          var resultado = document.getElementById("resultado");
+    
+          var delta = B * B - 4 * A * C;
+    
+          if (delta < 0) {
+            resultado.innerHTML = "A equação não possui raízes reais.";
+          } else if (delta === 0) {
+            var raiz = -B / (2 * A);
+            resultado.innerHTML = "A equação possui uma raiz real: " + raiz;
+          } else {
+            var raiz1 = (-B + Math.sqrt(delta)) / (2 * A);
+            var raiz2 = (-B - Math.sqrt(delta)) / (2 * A);
+            resultado.innerHTML = "A equação possui duas raízes reais: " + raiz1 + " e " + raiz2;
+          }
+        }
+      </script>
+    </head>
+    <body>
+      <h1>Calculadora de Raízes de Equação do 2º Grau</h1>
+      <label for="coeficienteA">Coeficiente A:</label>
+      <input type="number" id="coeficienteA"><br>
+      <label for="coeficienteB">Coeficiente B:</label>
+      <input type="number" id="coeficienteB"><br>
+      <label for="coeficienteC">Coeficiente C:</label>
+      <input type="number" id="coeficienteC"><br>
+      <button onclick="calcularRaizes()">Calcular</button>
+      <p id="resultado"></p>
+    </body>
+    </html>
+    
+</body>
+</html>
